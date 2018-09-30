@@ -28,7 +28,7 @@ public class MoveAdvice {
     }
 
     @Around("execution(* demo.aop.spring.MoveService.run())")
-    public void aroudRun(JoinPoint joinPoint) {
+    public void aroudRun(JoinPoint joinPoint) throws Throwable{
         System.out.println("跑步过程中要专心");
         Object object=((ProceedingJoinPoint)joinPoint).proceed();
     }
